@@ -1,11 +1,1 @@
 
-
-
-# MAF filter
-./plink --bfile Denali_Sporadic_PD_GActrls_Imputed_rltdrmvd_pihat --maf 0.01 --make-bed  --out ../Denali_Sporadic_PD_GActrls_Imputed_rltdrmvd_pihat_maf0.01
-
-
-# Association Test
-./plink2 --bfile Denali_Sporadic_PD_GActrls_Imputed_rltdrmvd_pihat_maf0.01_DR3_HWE1e-6_gndrupdtd --covar PCA_10_AGE_Gender.txt --covar-name AGE,SEX,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 --logistic no-firth hide-covar --adjust --covar-variance-standardize  PC1 PC2 PC3 PC4 PC5 PC6 PC7 PC8 PC9 PC10 --ci 0.95 --out AGEGEN/Denali.AGEGENPC10
-
-#
